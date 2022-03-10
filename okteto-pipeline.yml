@@ -1,5 +1,5 @@
 deploy:
-  - helm upgrade --install rabbitmq okteto/rabbitmq --set persistence.size=0.1Gi --set slave.persistence.size=0.1Gi
+  - helm upgrade --install rabbitmq okteto/rabbitmq --set rabbitmq.persistence.size=0.1Gi --set slave.persistence.size=0.1Gi
   - kubectl apply -f k8s.yml
 devs:
   - okteto.yml
